@@ -11,6 +11,7 @@
 
 ## BOT FEATURE
 - Multi Account 
+- Easy Account Register
 - Proxy Support (HTTP / SOCKS5)
 - Auto Run Teneo Node
 
@@ -20,7 +21,7 @@
 ➡️ Download Extension : https://chromewebstore.google.com/detail/teneo-community-node/emcclcoaglgcpoognfiggmhnhgabppkm
 - Install Extension
 - Login / Create Account
-- Enter Ref Code : ```WplFa```  (USE REF GOT 2500 Points)
+- Enter Ref Code : ```8wtOB```  (USE REF GOT 2500 Points)
 - Verify Email
 - Run Nodes Ektension 
 - LFG
@@ -31,7 +32,7 @@
 ### Linux
 1. Clone project repo
    ```
-   git clone https://github.com/airdropinsiders/Teneo-Bot.git && cd Teneo-Bot
+   git clone https://github.com/PrastianHD/tono.git && cd Teneo-Bot
    ```
 2. Run
    ```
@@ -58,7 +59,7 @@
 1. Open your `Command Prompt` or `Power Shell`.
 2. Clone project repo
    ```
-   git clone https://github.com/airdropinsiders/Teneo-Bot.git && cd Teneo-Bot
+   git clone https://github.com/PrastianHD/tono.git && cd Teneo-Bot
    ```
 3. Run 
    ```
@@ -75,6 +76,23 @@
     ```
     npm run start
     ```
+
+## Regsiter Bot
+1. Clone project repo
+   ```
+   git clone https://github.com/PrastianHD/tono.git && cd Teneo-Bot
+   ```
+2. Run
+   ```
+   npm install 
+   ```
+3. Navigate to `accounts` folder and rename `accounts_tmp.yaml` to `accounts.yaml`.
+4. Configurasi your account
+5. Run Bot
+    ```
+    npm run regist
+    ```
+
 
 ## Update Bot
 
