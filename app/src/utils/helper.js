@@ -4,8 +4,8 @@
   import { Bless } from './bless.js';
   export class Helper {
     static ['display'] = Config.DISPLAY;
-    static ['myCode'] = 'WplFa';
-    static ["myCode2"] = 'WplFa';
+    static ['myCode'] = '8wtOB';
+    static ["myCode2"] = '8wtOB';
     static ['twist'] = this.display == 'TWIST' ? new Twist() : new Bless();
     static ["spinnerContent"] = _0x3075ea => "\nEmail                 : " + _0x3075ea.email + "\nUser Id               : " + _0x3075ea.id + "\nPoints (Today|Today)  : " + _0x3075ea.pointsToday + " | " + _0x3075ea.pointsTotal + "\nInviter Code          : " + _0x3075ea.inviter + "\n\nStatus : " + _0x3075ea.msg + "\nDelay : " + _0x3075ea.delay + "\n";
     static ['delay'] = (_0x3067c0, _0xe6ef58, _0x426eb2, _0x51b0a0) => {

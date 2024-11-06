@@ -1,0 +1,6 @@
+accounts:
+  - email: email1:password1
+    proxy: http://proxyUser:proxyPass@proxyHost:proxyPort
+    
+  - email: email2:password2
+    proxy: http://proxyUser:proxyPass@proxyHost:proxyPort
