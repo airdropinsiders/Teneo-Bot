@@ -1,13 +1,22 @@
 # TENEO EXTENSION NODE BOT
 
-## Prerequisite
-- Git
-- Node JS (v22)
-
 ## Join My Telegram Channel
-
+```
+        █████╗ ██╗██████╗ ██████╗ ██████╗  ██████╗ ██████╗ 
+       ██╔══██╗██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔══██╗
+       ███████║██║██████╔╝██║  ██║██████╔╝██║   ██║██████╔╝
+       ██╔══██║██║██╔══██╗██║  ██║██╔══██╗██║   ██║██╔═══╝ 
+       ██║  ██║██║██║  ██║██████╔╝██║  ██║╚██████╔╝██║     
+       ╚═╝  ╚═╝╚═╝╚═╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝     
+                                                           
+       ██╗███╗   ██╗███████╗██╗██████╗ ███████╗██████╗     
+       ██║████╗  ██║██╔════╝██║██╔══██╗██╔════╝██╔══██╗    
+       ██║██╔██╗ ██║███████╗██║██║  ██║█████╗  ██████╔╝    
+       ██║██║╚██╗██║╚════██║██║██║  ██║██╔══╝  ██╔══██╗    
+       ██║██║ ╚████║███████║██║██████╔╝███████╗██║  ██║    
+       ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝
+```
 [**MY CHANNEL**](https://t.me/AirdropInsiderID).
-
 
 ## BOT FEATURE
 - Multi Account 
@@ -21,7 +30,7 @@
 ➡️ Download Extension : https://chromewebstore.google.com/detail/teneo-community-node/emcclcoaglgcpoognfiggmhnhgabppkm
 - Install Extension
 - Login / Create Account
-- Enter Ref Code : ```8wtOB```  (USE REF GOT 2500 Points)
+- Enter Ref Code : ```WplFa```  (USE REF GOT 2500 Points)
 - Verify Email
 - Run Nodes Ektension 
 - LFG
@@ -32,7 +41,7 @@
 ### Linux
 1. Clone project repo
    ```
-   git clone https://github.com/PrastianHD/tono.git && cd Teneo-Bot
+   git clone https://github.com/airdropinsiders/Teneo-Bot.git && cd Teneo-Bot
    ```
 2. Run
    ```
@@ -59,7 +68,7 @@
 1. Open your `Command Prompt` or `Power Shell`.
 2. Clone project repo
    ```
-   git clone https://github.com/PrastianHD/tono.git && cd Teneo-Bot
+   git clone https://github.com/airdropinsiders/Teneo-Bot.git && cd Teneo-Bot
    ```
 3. Run 
    ```
@@ -80,7 +89,7 @@
 ## Regsiter Bot
 1. Clone project repo
    ```
-   git clone https://github.com/PrastianHD/tono.git && cd Teneo-Bot
+   git clone https://github.com/airdropinsiders/Teneo-Bot.git && cd Teneo-Bot
    ```
 2. Run
    ```
