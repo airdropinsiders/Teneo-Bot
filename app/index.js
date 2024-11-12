@@ -1,69 +1,79 @@
-import { accountLists } from './accounts/accounts.js';
-import { proxyList } from './config/proxy_list.js';
-import a0_0x1cab9b from './src/core/core.js';
-import { Helper } from './src/utils/helper.js';
-import a0_0x516072 from './src/utils/logger.js';
-
-async function operation(account, proxy) {
-  const botInstance = new a0_0x1cab9b(account, proxy);
-  try {
-    await botInstance.login();
-    await botInstance.getUser();
-    await Helper.refCheck(botInstance.user.user_metadata.invited_by, botInstance.user.email);
-    await botInstance.connectWebSocket();
-  } catch (error) {
-    if (error.message) {
-      await Helper.delay(10000, account, "Error: " + error.message + ", Retry again after 10 seconds", botInstance);
-    } else {
-      await Helper.delay(10000, account, "Error: " + JSON.stringify(error) + ", Retry again after 10 seconds", botInstance);
-    }
-    await Helper.delay(10000); // Delay before retrying
-    await operation(account, proxy);
-  }
-}
-
-async function startBot() {
-  return new Promise(async (resolve, reject) => {
+  import { accountLists } from './accounts/accounts.js';
+  import { proxyList } from './config/proxy_list.js';
+  import a0_0x40d5ac from './src/core/core.js';
+  import { Helper } from './src/utils/helper.js';
+  import a0_0x31cef9 from './src/utils/logger.js';
+  async function operation(_0x4ba641, _0x34b9e8) {
+    const _0x2bc985 = new a0_0x40d5ac(_0x4ba641, _0x34b9e8);
     try {
-      a0_0x516072.info("BOT STARTED");
-      if (accountLists.length === 0) {
-        throw new Error("Please input your account first in accounts.js file");
+      await _0x2bc985.login();
+      await _0x2bc985.getUser();
+      //await Helper.refCheck(_0x2bc985.user.user_metadata.invited_by, _0x2bc985.user.email);
+      await _0x2bc985.connectWebSocket();
+    } catch (_0xd646) {
+      if (_0xd646.message) {
+        await Helper.delay(0x2710, _0x4ba641, "Error : " + _0xd646.message + ", Retry again after 10 Second", _0x2bc985);
+      } else {
+        await Helper.delay(0x2710, _0x4ba641, "Error :" + JSON.stringify(_0xd646) + ", Retry again after 10 Second", _0x2bc985);
       }
-      if (proxyList.length !== accountLists.length && proxyList.length !== 0) {
-        throw new Error("You have " + accountLists.length + " accounts but provided " + proxyList.length + " proxies.");
-      }
-
-      for (let index = 0; index < accountLists.length; index++) {
-        const account = accountLists[index];
-        const proxy = proxyList[index];
-        await operation(account, proxy);
-        await Helper.delay(30000); // Delay for 500ms between operations
-      }
-
-      resolve();
-    } catch (error) {
-      a0_0x516072.info("BOT STOPPED");
-      a0_0x516072.error(JSON.stringify(error));
-      reject(error);
+      await operation(_0x4ba641, _0x34b9e8);
     }
-  });
-}
-
-(async () => {
-  try {
-    a0_0x516072.clear();
-    a0_0x516072.info('');
-    a0_0x516072.info("Application Started");
-    console.log("TENEO NODE BOT");
-    console.log();
-    console.log("Join Channel: https://t.me/AirdropInsiderID");
-    console.log("Don't forget to run git pull to keep up to date");
-    console.log();
-    console.log();
-    Helper.showSkelLogo();
-    await startBot();
-  } catch (error) {
-    console.log("Error during executing bot", error);
-    await startBot();
   }
-})();
+  async function startBot() {
+    return new Promise(async (_0x29f1d0, _0x29ba85) => {
+      try {
+        a0_0x31cef9.info("BOT STARTED");
+        if (accountLists.length == 0x0) {
+          throw Error("Please input your account first on accounts.js file");
+        }
+        if (proxyList.length != accountLists.length && proxyList.length != 0x0) {
+          throw Error("You Have " + accountLists.length + " Accounts But Provide " + proxyList.length);
+        }
+        const _0x125816 = [];
+        for (const _0x2bc5e4 of accountLists) {
+          const _0x30b550 = accountLists.indexOf(_0x2bc5e4);
+          const _0x211683 = proxyList[_0x30b550];
+          _0x125816.push(operation(_0x2bc5e4, _0x211683));
+        }
+        await Promise.all(_0x125816);
+        _0x29f1d0();
+      } catch (_0x286bc8) {
+        a0_0x31cef9.info("BOT STOPPED");
+        a0_0x31cef9.error(JSON.stringify(_0x286bc8));
+        _0x29ba85(_0x286bc8);
+      }
+    });
+  }
+  (async () => {
+    try {
+      a0_0x31cef9.clear();
+      a0_0x31cef9.info('');
+      a0_0x31cef9.info("Application Started");
+      console.log(`
+        █████╗ ██╗██████╗ ██████╗ ██████╗  ██████╗ ██████╗ 
+       ██╔══██╗██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔══██╗
+       ███████║██║██████╔╝██║  ██║██████╔╝██║   ██║██████╔╝
+       ██╔══██║██║██╔══██╗██║  ██║██╔══██╗██║   ██║██╔═══╝ 
+       ██║  ██║██║██║  ██║██████╔╝██║  ██║╚██████╔╝██║     
+       ╚═╝  ╚═╝╚═╝╚═╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝     
+                                                           
+       ██╗███╗   ██╗███████╗██╗██████╗ ███████╗██████╗     
+       ██║████╗  ██║██╔════╝██║██╔══██╗██╔════╝██╔══██╗    
+       ██║██╔██╗ ██║███████╗██║██║  ██║█████╗  ██████╔╝    
+       ██║██║╚██╗██║╚════██║██║██║  ██║██╔══╝  ██╔══██╗    
+       ██║██║ ╚████║███████║██║██████╔╝███████╗██║  ██║    
+       ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    
+       `);
+      console.log("TENEO NODE BOT");
+      console.log();
+      console.log("Join Channel : https://t.me/AirdropInsiderID");
+      console.log("Dont forget to run git pull to keep up to date");
+      console.log();
+      console.log();
+      Helper.showSkelLogo();
+      await startBot();
+    } catch (_0x8553e0) {
+      console.log("Error During executing bot", _0x8553e0);
+      await startBot();
+    }
+  })();
